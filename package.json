@@ -1,0 +1,24 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "Atividade acadêmica para exercitar conceitos da disciplina Design de Games",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan-lima/memory-game.git"
+  },
+  "author": "Bryan Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryan-lima/memory-game/issues"
+  },
+  "homepage": "https://github.com/bryan-lima/memory-game#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
+  }
+}
