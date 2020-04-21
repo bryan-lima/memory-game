@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/brands.css">
     <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/solid.css">
 
+    <!-- Iconify -->
+    <script src="assets/icons/iconify.min.js"></script>
+    <!-- <script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script> -->
+
     <title>Jogo da Memória</title>
     <link rel="icon" type="image/svg+xml" href="logo-default.svg" />
     <meta name="description" content="Atividade acadêmica para exercitar conceitos da disciplina Design de Games">
@@ -35,7 +39,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md navbar-dark bg-black">
         <!-- Nome/Logo -->
-        <a class="navbar-brand d-md-none mb-0 mx-auto" href="index.html">Jogo da Memória <img src="favicon.svg" height="42" width="42"></a>
+        <a class="navbar-brand d-md-none mb-0 mx-auto" href="index.html">Jogo da Memória <img src="logo-default.svg" height="42" width="42"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,6 +50,14 @@
                 <li class="nav-item active">
                     <a class="nav-link ml-3" href="index.html"><i class="fas fa-home"></i> Home <span class="sr-only">(página atual)</span></a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ml-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="iconify" data-icon="entypo:game-controller" data-width="17px" data-inline="true"></span> Jogos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item btn btn-primary" href="com-10-pares.html">Jogo da Memória - Com 10 pares</a>
+                      <a class="dropdown-item" href="com-15-pares.html">Jogo da Memória - Com 15 pares</a>
+                    </div>
                 <li class="nav-item">
                     <a class="nav-link ml-3" href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
                 </li>
@@ -106,6 +118,13 @@
                 <h6 class="lead"><strong>Menu</strong></h6>
                 <nav class="nav flex-column">
                     <a class="nav-link active text-light" href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="iconify" data-icon="entypo:game-controller" data-width="17px"  data-inline="true"></span> Jogos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="com-10-pares.html">Jogo da Memória - Com 10 pares</a>
+                      <a class="dropdown-item" href="com-15-pares.html">Jogo da Memória - Com 15 pares</a>
+                    </div>
                     <a class="nav-link text-light" href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
                 </nav>
             </div>
@@ -143,6 +162,8 @@
     <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
     <script src="assets/script.js"></script>
 </body>
