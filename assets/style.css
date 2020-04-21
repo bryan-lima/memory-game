@@ -19,6 +19,48 @@
          url('fonts/pirulenrg.svg#pirulenrg') format('svg');
 }
 
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) {
+    a.pirulenrg {
+        font-family: pirulenrg;
+        font-size: 1rem;
+    }
+
+    #logo-navbar-brand {
+        width: 32px;
+        height: 26px;
+    }
+
+}
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    a.pirulenrg {
+        font-family: pirulenrg;
+        font-size: 1.5rem;
+    }
+
+    #logo-navbar-brand {
+        width: 50px;
+        height: 40px;
+    }
+}
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+}
+
+/* Dispositivos large (desktops com 992px ou mais) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+/* Dispositivos extra large (desktops grandes com 1200px ou mais) */
+@media (min-width: 1200px) { 
+
+}
+
 .h1-pirulenrg {
     font-family: pirulenrg;
     font-size: 2.5rem;
@@ -41,8 +83,8 @@
     font-family: pirulenrg;
 }
 
-a.pirulenrg {
-    font-family: pirulenrg;
+.navbar-toggler-icon.personalizado {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .text-footer-gray {
