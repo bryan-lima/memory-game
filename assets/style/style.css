@@ -17,3 +17,11 @@ img {
 .bg-black {
     background-color: black;
 }
+
+.bg-gray {
+    background-color: #222;
+}
+
+.hr-white {
+    background-color: #FFFFFF;
+}
