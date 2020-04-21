@@ -23,12 +23,12 @@
 @media (max-width: 575.98px) {
     a.pirulenrg {
         font-family: pirulenrg;
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     #logo-navbar-brand {
-        width: 32px;
-        height: 26px;
+        width: 34px;
+        height: 32px;
     }
 
 }
@@ -41,8 +41,8 @@
     }
 
     #logo-navbar-brand {
-        width: 50px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
     }
 }
 
