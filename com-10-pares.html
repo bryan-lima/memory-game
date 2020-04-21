@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/node_modules/bootstrap/compiler/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/brands.css">
+    <link rel="stylesheet" href="assets/node_modules/@fortawesome/fontawesome-free/css/solid.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
+        integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css"
+        integrity="sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css"
+        integrity="sha256-pIAzc/BIIo/hSvtNEDIiMTBtR9EfK3COmnH2pt8cPDY=" crossorigin="anonymous" /> -->
+
+    <title>Jogo da Memória - 10 Pares</title>
+    <link rel="icon" type="image/svg+xml" href="logo-default.svg" />
+    <meta name="description" content="Atividade acadêmica para exercitar conceitos da disciplina Design de Games">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" 
+        content="Jogo, memória, game, memory, acadêmico, faculdade, Design, Games, atividade, html, 
+        javascript, bootstrap, npm, sass, cards">
+    <meta name="author" content="Bryan Lima">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-black">
+        <!-- Nome/Logo -->
+        <a class="navbar-brand d-md-none mb-0 mx-auto pirulenrg" href="index.html">Jogo da Memória <img src="logo-default.svg" height="42" width="42"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite" aria-controls="navbarSite" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu colapsado -->
+        <div class="collapse navbar-collapse" id="navbarSite">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link ml-3" href="index.html"><i class="fas fa-home"></i> Home <span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle ml-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="iconify" data-icon="entypo:game-controller" data-width="17px" data-inline="true"></span> Jogos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item active" href="com-10-pares.html"><span class="iconify" data-icon="vs-question-square" data-width="16px" data-inline="true"></span> Jogo da Memória - 10 pares</a>
+                      <a class="dropdown-item" href="com-15-pares.html"><span class="iconify" data-icon="vs-question-square" data-width="16px" data-inline="true"></span> Jogo da Memória - 15 pares</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ml-3" href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Link para GitHub Repo que é exibido quando dimensão da tela é menor que md -->
+                    <a class="nav-link ml-3 d-block d-md-none" href="https://github.com/bryan-lima/memory-game"><i class="fab fa-github"></i> GitHub Repo</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Link para GitHub Repo que é exibido quando dimensão da tela é igual ou maior que md -->
+        <a class="btn btn-light d-none d-md-block mb-0 mr-auto" href="https://github.com/bryan-lima/memory-game"><i class="fab fa-github"></i> GitHub Repo</a>
+    </nav>
+
+
+
+    <!-- RODAPÉ -->
+    <div class="container-fluid">
+        <div class="row bg-gray">
+            <!-- Logo/Nome -->
+            <div class="col-sm-12 col-md-4 mt-0 mb-2 my-auto text-white">
+                <div class="row mt-1 mb-3 justify-content-center">
+                    <div class="col-5.5">
+                        <img class="float-left" src="logo-gray.svg" height="75" width="61">
+                    </div>
+                    <div class="col-6.5 my-2 ml-1">
+                        <h1 class="lead2-pirulenrg text-footer-gray">Jogo da</h1>
+                        <h1 class="lead2-pirulenrg text-footer-gray">Memória</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar vertical -->
+            <div class="col-sm-12 col-md-4 mt-0 mb-2 text-white">
+                <hr class="hr-gray">
+                <h6 class="lead"><strong>Menu</strong></h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link text-light" href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="iconify" data-icon="entypo:game-controller" data-width="17px"  data-inline="true"></span> Jogos
+                    </a>
+                    <div class="dropdown-menu active" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item active" href="com-10-pares.html"><span class="iconify" data-icon="vs-question-square" data-width="16px" data-inline="true"></span> Jogo da Memória - 10 pares</a>
+                      <a class="dropdown-item" href="com-15-pares.html"><span class="iconify" data-icon="vs-question-square" data-width="16px" data-inline="true"></span> Jogo da Memória - 15 pares</a>
+                    </div>
+                    <a class="nav-link text-light" href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a>
+                </nav>
+            </div>
+            <!-- Repositórios GitHub -->
+            <div class="col-sm-12 col-md-4 mt-0 mb-2 text-white">
+                <hr class="hr-gray">
+                <h6 class="lead"><strong>GitHub</strong></h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link text-light" href="https://github.com/bryan-lima"><i class="fab fa-github"></i> Perfil</a>
+                    <a class="nav-link text-light" href="https://github.com/bryan-lima/memory-game"><i class="fab fa-github"></i> Projeto</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row bg-black">
+            <footer class="col-12">
+                <p class="text-center mt-3 text-white">
+                  &copy; 2020 &middot; Desenvolvido por Bryan Lima
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script> -->
+
+    <script src="assets/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
+    <script src="assets/icons/iconify.min.js"></script>
+    <!-- <script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script> -->
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
