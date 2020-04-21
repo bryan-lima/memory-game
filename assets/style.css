@@ -9,6 +9,42 @@
 *
 **************************************************************************************/
 
+@font-face {
+    font-family: 'pirulenrg';
+    src: url('fonts/pirulenrg.eot');
+    src: url('fonts/pirulenrg.eot') format('embedded-opentype'),
+         url('fonts/pirulenrg.woff2') format('woff2'),
+         url('fonts/pirulenrg.woff') format('woff'),
+         url('fonts/pirulenrg.ttf') format('truetype'),
+         url('fonts/pirulenrg.svg#pirulenrg') format('svg');
+}
+
+.h1-pirulenrg {
+    font-family: pirulenrg;
+    font-size: 2.5rem;
+}
+
+.title-pirulenrg {
+    font-family: pirulenrg;
+    font-size: 3.0rem;
+}
+
+.lead-pirulenrg {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: pirulenrg;
+}
+
+.lead2-pirulenrg {
+    font-size: 1.50rem;
+    font-weight: 300;
+    font-family: pirulenrg;
+}
+
+.text-footer-gray {
+    color: #666666;
+}
+
 img {
     max-width: 100%;
     height: auto;
