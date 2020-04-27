@@ -20,7 +20,16 @@
 }
 
 
-.title-pirulenrg, .h1-pirulenrg, .lead-pirulenrg, .lead2-pirulenrg, a.pirulenrg {
+.title-pirulenrg,
+.h1-pirulenrg,
+.h2-pirulenrg,
+.h3-pirulenrg,
+.h4-pirulenrg,
+.h5-pirulenrg,
+.h6-pirulenrg,
+.lead-pirulenrg,
+.lead2-pirulenrg,
+a.pirulenrg {
   font-family: pirulenrg;
 }
 
@@ -32,7 +41,28 @@
   font-size: 2.5rem;
 }
 
-.lead-pirulenrg, .lead2-pirulenrg {
+.h2-pirulenrg {
+  font-size: 2rem;
+}
+
+.h3-pirulenrg {
+  font-size: 1.75rem;
+}
+
+.h4-pirulenrg {
+  font-size: 1.5rem;
+}
+
+.h5-pirulenrg {
+  font-size: 1.25rem;
+}
+
+.h6-pirulenrg {
+  font-size: 1rem;
+}
+
+.lead-pirulenrg,
+.lead2-pirulenrg {
   font-weight: 300;
 }
 
