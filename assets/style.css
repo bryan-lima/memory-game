@@ -10,40 +10,60 @@
 **************************************************************************************/
 
 @font-face {
-    font-family: 'pirulenrg';
-    src: url('fonts/pirulenrg.eot');
-    src: url('fonts/pirulenrg.eot') format('embedded-opentype'),
-         url('fonts/pirulenrg.woff2') format('woff2'),
-         url('fonts/pirulenrg.woff') format('woff'),
-         url('fonts/pirulenrg.ttf') format('truetype'),
-         url('fonts/pirulenrg.svg#pirulenrg') format('svg');
+  font-family: 'pirulenrg';
+  src: url('fonts/pirulenrg.eot');
+  src: url('fonts/pirulenrg.eot') format('embedded-opentype'),
+  url('fonts/pirulenrg.woff2') format('woff2'),
+  url('fonts/pirulenrg.woff') format('woff'),
+  url('fonts/pirulenrg.ttf') format('truetype'),
+  url('fonts/pirulenrg.svg#pirulenrg') format('svg');
+}
+
+
+.title-pirulenrg, .h1-pirulenrg, .lead-pirulenrg, .lead2-pirulenrg, a.pirulenrg {
+  font-family: pirulenrg;
+}
+
+.title-pirulenrg {
+  font-size: 3.0rem;
+}
+
+.h1-pirulenrg {
+  font-size: 2.5rem;
+}
+
+.lead-pirulenrg {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.lead2-pirulenrg {
+  font-size: 1.50rem;
+  font-weight: 300;
 }
 
 /* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
 @media (max-width: 575.98px) {
-    a.pirulenrg {
-        font-family: pirulenrg;
-        font-size: 1.05rem;
-    }
+  a.pirulenrg {
+    font-size: 1.05rem;
+  }
 
-    #logo-navbar-brand {
-        width: 34px;
-        height: 32px;
-    }
-
+  #logo-navbar-brand {
+    width: 34px;
+    height: 32px;
+  }
 }
 
 /* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-    a.pirulenrg {
-        font-family: pirulenrg;
-        font-size: 1.5rem;
-    }
+  a.pirulenrg {
+    font-size: 1.5rem;
+  }
 
-    #logo-navbar-brand {
-        width: 42px;
-        height: 42px;
-    }
+  #logo-navbar-brand {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 /* Dispositivos médios (tablets com 768px ou mais) */
@@ -54,6 +74,13 @@
 /* Dispositivos large (desktops com 992px ou mais) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
 
+  #logo-freepik {
+    height: 60px;
+  }
+  
+  #logo-banco-personagens, #logo-dafont {
+    height: 62px;
+  }
 }
 
 /* Dispositivos extra large (desktops grandes com 1200px ou mais) */
@@ -61,53 +88,166 @@
 
 }
 
-.h1-pirulenrg {
-    font-family: pirulenrg;
-    font-size: 2.5rem;
-}
-
-.title-pirulenrg {
-    font-family: pirulenrg;
-    font-size: 3.0rem;
-}
-
-.lead-pirulenrg {
-    font-size: 1.25rem;
-    font-weight: 300;
-    font-family: pirulenrg;
-}
-
-.lead2-pirulenrg {
-    font-size: 1.50rem;
-    font-weight: 300;
-    font-family: pirulenrg;
-}
-
 .navbar-toggler-icon.personalizado {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .text-footer-gray {
-    color: #666666;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+  color: #666666;
 }
 
 .bg-black {
-    background-color: black;
+  background-color: black;
 }
 
 .bg-gray {
-    background-color: #222;
+  background-color: #222;
 }
 
 .hr-white {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .hr-gray {
-    background-color: #666666;
+  background-color: #666666;
+}
+
+/*
+  Adaptado código de url:https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/
+  Autora: Marina Ferreira
+*/
+
+.container-score {
+  width: 85vh;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: stretch;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.score {
+  width: calc(50% - 2px);
+  height: calc(100% - 2px);
+  position: relative;
+  margin: 1px;
+  justify-content: center;
+  justify-items: center;
+  align-items: stretch;
+  align-content: center;
+}
+
+.container-memory-game {
+  width: 85vh;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+  
+.memory-card {
+  width: calc(20% - 2px);
+  height: calc(25% - 2px);
+  margin: 1px;
+  position: relative;
+  transition: all .5s;
+  transform-style: preserve-3d;
+  transform: scale(1);
+  border-radius: 10px;
+}
+  
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card:hover {
+  box-shadow: 0 0 12px #00ccff;
+}
+
+.match {
+  box-shadow: 0 0 12px #0f0;
+}
+
+.no-match {
+  box-shadow: 0 0 14px #eb1607;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  background: #0F4C81; /* #0F4C81 -> Cor do ano 2020, de acordo com Pantone (https://www.pantone.com.br/inteligencia-da-cor/cor-do-ano-2020-classic-blue/) */
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+
+@media screen and (max-width: 575.98px) {
+
+  .container-score {
+    width: 50vh;
+    height: 40px;
+  }
+
+  .container-memory-game {
+    width: 30vh;
+    height: 500px;
+  }
+
+  .memory-card {
+    width: calc(33.3333% - 2px);
+    height: calc(14.2857% - 2px);
+  }
+
+  #logo-freepik {
+    height: 50px;
+  }
+  
+  #logo-banco-personagens, #logo-dafont {
+    height: 54px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+
+  .container-score {
+    width: 50vh;
+    height: 40px;
+  }
+  .container-memory-game {
+    width: 50vh;
+    height: 650px;
+  }
+
+  .memory-card {
+    width: calc(25% - 2px);
+    height: calc(20% - 2px);
+  }
+
+  #logo-freepik {
+    height: 40px;
+  }
+  
+  #logo-banco-personagens, #logo-dafont {
+    height: 46px;
+  }
 }
