@@ -140,7 +140,7 @@
   align-content: center;
 }
 
-.container-memory-game {
+.container-memory-game-10-pairs, .container-memory-game-15-pairs {
   width: 85vh;
   height: 600px;
   margin: auto;
@@ -154,14 +154,22 @@
 }
   
 .memory-card {
-  width: calc(20% - 2px);
-  height: calc(25% - 2px);
   margin: 1px;
   position: relative;
   transition: all .5s;
   transform-style: preserve-3d;
   transform: scale(1);
   border-radius: 10px;
+}
+
+.card-10-pairs {
+  width: calc(20% - 2px);
+  height: calc(25% - 2px);
+}
+
+.card-15-pairs {
+  width: calc(16.6666% - 2px);
+  height: calc(20% - 2px);
 }
   
 .memory-card.flip {
@@ -202,20 +210,29 @@
 
 
 @media screen and (max-width: 575.98px) {
-
   .container-score {
     width: 50vh;
     height: 40px;
   }
 
-  .container-memory-game {
+  .container-memory-game-10-pairs {
     width: 30vh;
     height: 500px;
   }
 
-  .memory-card {
+  .container-memory-game-15-pairs {
+    width: 30vh;
+    height: 800px;
+  }
+
+  .card-10-pairs {
     width: calc(33.3333% - 2px);
     height: calc(14.2857% - 2px);
+  }
+
+  .card-15-pairs {
+    width: calc(33.3333% - 2px);
+    height: calc(10% - 2px);
   }
 
   #logo-freepik {
@@ -228,19 +245,29 @@
 }
 
 @media screen and (max-width: 767.98px) {
-
   .container-score {
     width: 50vh;
     height: 40px;
   }
-  .container-memory-game {
+
+  .container-memory-game-10-pairs {
     width: 50vh;
     height: 650px;
   }
 
-  .memory-card {
+  .container-memory-game-15-pairs {
+    width: 50vh;
+    height: 1450px;
+  }
+
+  .card-10-pairs {
     width: calc(25% - 2px);
     height: calc(20% - 2px);
+  }
+
+  .card-15-pairs {
+    width: calc(33.3333% - 2px);
+    height: calc(10% - 2px);
   }
 
   #logo-freepik {
