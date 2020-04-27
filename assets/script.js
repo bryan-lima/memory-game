@@ -9,6 +9,29 @@
 *
 **************************************************************************************/
 
+// Seleciona elemento #btn-restart e armazena na constante bntRestart
+const bntRestart = document.getElementById('btn-restart');
+
+// Seleciona elemento #icon-restart e armazena na constante iconRestart
+const iconRestart = document.getElementById('icon-restart');
+
+// Adiciona eventos mouseover e mouseout
+bntRestart.addEventListener('mouseover', mouseOverBtn);
+bntRestart.addEventListener('mouseout', mouseOutBtn);
+
+// Aplica efeito de rotação no ícone do botão Restart, que é ativado quando passa o mouse por cima do botão
+function mouseOverBtn() {
+  iconRestart.classList.add('fa-spin');
+}
+
+// Desativa efeito de rotação no ícone do botão Restart, quando o mouse é retirado de cima do botão
+function mouseOutBtn() {
+  iconRestart.classList.remove('fa-spin');
+}
+
+// Seleciona elemento #score e armazena na constante scoreNum
+const scoreElement = document.getElementById('score');
+
 // Controla score
 function ScoreBoardGameControl() {
 	var score = 0;
@@ -46,6 +69,20 @@ function ScoreBoardGameControl() {
 
 // Instancia objeto
 scoreControl = new ScoreBoardGameControl;
+
+function checkScore() {
+  scoreNow = scoreControl.scoreNow();
+  if (scoreNow > 0) {
+    scoreElement.classList.remove('btn-primary', 'btn-danger');
+    scoreElement.classList.add('btn-success');
+  } else if (scoreNow < 0) {
+    scoreElement.classList.remove('btn-primary', 'btn-success');
+    scoreElement.classList.add('btn-danger');
+  } else {
+    scoreElement.classList.remove('btn-danger', 'btn-success');
+    scoreElement.classList.add('btn-primary');
+  }
+}
 
 /*
   Adaptado código de url:https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/
@@ -94,6 +131,7 @@ function disableCards() {
 
   scoreControl.incrementScore();
   scoreControl.updateScore();
+  checkScore();
 
   resetBoard();
 }
@@ -105,6 +143,7 @@ function unflipCards() {
 
   scoreControl.decrementScore();
   scoreControl.updateScore();
+  checkScore();
 
   setTimeout(() => {
     firstCard.classList.remove('flip');
@@ -130,6 +169,7 @@ function restartGame() {
   cards.forEach(card => card.classList.remove('flip'));
   cards.forEach(card => card.addEventListener('click', flipCard));
   scoreControl.clearScore();
+  checkScore();
   resetBoard();
   shuffle();
 }
