@@ -9,11 +9,11 @@
 *
 **************************************************************************************/
 
-// Seleciona elemento #btn-restart e armazena na constante bntRestart
+// Seleciona elemento e armazena na constante
 const bntRestart = document.getElementById('btn-restart');
-
-// Seleciona elemento #icon-restart e armazena na constante iconRestart
 const iconRestart = document.getElementById('icon-restart');
+
+const scoreElement = document.getElementById('score');
 
 // Adiciona eventos mouseover e mouseout
 bntRestart.addEventListener('mouseover', mouseOverBtn);
@@ -29,9 +29,6 @@ function mouseOutBtn() {
   iconRestart.classList.remove('fa-spin');
 }
 
-// Seleciona elemento #score e armazena na constante scoreNum
-const scoreElement = document.getElementById('score');
-
 // Controla score
 function ScoreBoardGameControl() {
 	var score = 0;
@@ -39,8 +36,7 @@ function ScoreBoardGameControl() {
   var corrects = 0;
  
 	this.updateScore =  function() {
-		var scoreDiv = document.getElementById("score");
-		scoreDiv.innerHTML =  score;
+		scoreElement.innerHTML =  score;
 	}
 
 	this.incrementScore =  function() {
