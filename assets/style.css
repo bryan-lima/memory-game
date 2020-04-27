@@ -32,14 +32,16 @@
   font-size: 2.5rem;
 }
 
+.lead-pirulenrg, .lead2-pirulenrg {
+  font-weight: 300;
+}
+
 .lead-pirulenrg {
   font-size: 1.25rem;
-  font-weight: 300;
 }
 
 .lead2-pirulenrg {
   font-size: 1.50rem;
-  font-weight: 300;
 }
 
 /* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
@@ -92,24 +94,20 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.text-footer-gray {
-  color: #666666;
-}
-
 .bg-black {
   background-color: black;
 }
 
-.bg-gray {
+.bg-gray-dark {
   background-color: #222;
 }
 
-.hr-white {
-  background-color: #FFFFFF;
+.bg-gray-light {
+  background-color: #666666;
 }
 
-.hr-gray {
-  background-color: #666666;
+.text-gray-light {
+  color: #666666;
 }
 
 /*
