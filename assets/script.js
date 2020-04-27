@@ -10,23 +10,37 @@
 **************************************************************************************/
 
 // Seleciona elemento e armazena na constante
-const bntRestart = document.getElementById('btn-restart');
-const iconRestart = document.getElementById('icon-restart');
-
 const scoreElement = document.getElementById('score');
+const scoreModal = document.getElementById('modal-end-game-score');
 
-// Adiciona eventos mouseover e mouseout
-bntRestart.addEventListener('mouseover', mouseOverBtn);
-bntRestart.addEventListener('mouseout', mouseOutBtn);
+// Armazena o path atual da página
+urlPage = window.location.pathname;
 
-// Aplica efeito de rotação no ícone do botão Restart, que é ativado quando passa o mouse por cima do botão
-function mouseOverBtn() {
-  iconRestart.classList.add('fa-spin');
-}
+if ((urlPage == '/memory-game/com-10-pares.html') || (urlPage == '/memory-game/com-15-pares.html')) {
 
-// Desativa efeito de rotação no ícone do botão Restart, quando o mouse é retirado de cima do botão
-function mouseOutBtn() {
-  iconRestart.classList.remove('fa-spin');
+  // Seleciona elemento e armazena na constante
+  const bntRestart = document.getElementById('btn-restart');
+  const iconRestart = document.getElementById('icon-restart');
+  const modalBtnRestart = document.getElementById('modal-btn-restart');
+  const modalIconRestart = document.getElementById('modal-icon-restart');
+
+  // Adiciona eventos mouseover e mouseout
+  bntRestart.addEventListener('mouseover', mouseOverBtn);
+  bntRestart.addEventListener('mouseout', mouseOutBtn);
+  modalBtnRestart.addEventListener('mouseover', mouseOverBtn);
+  modalBtnRestart.addEventListener('mouseout', mouseOutBtn);
+
+  // Aplica efeito de rotação no ícone do botão Restart, que é ativado quando passa o mouse por cima do botão
+  function mouseOverBtn() {
+    iconRestart.classList.add('fa-spin');
+    modalIconRestart.classList.add('fa-spin');
+  }
+
+  // Desativa efeito de rotação no ícone do botão Restart, quando o mouse é retirado de cima do botão
+  function mouseOutBtn() {
+    iconRestart.classList.remove('fa-spin');
+    modalIconRestart.classList.remove('fa-spin');
+  }
 }
 
 // Controla score
@@ -44,12 +58,15 @@ function ScoreBoardGameControl() {
     score+= POINT_GAME;
     var TOTAL_CORRECT = checkPairs();
 		if (corrects ==  TOTAL_CORRECT) {
-			alert("Fim de Jogo! Seu Score foi " + score);
+      // alert("Fim de Jogo! Seu Score foi " + score);
+      scoreModal.innerHTML =  score;
+      checkScore(scoreModal);
+      $('#modal-end-game').modal('toggle')
 		}
 	}
 
 	this.decrementScore =  function() {
-		score-= POINT_GAME-5;
+    score-= POINT_GAME-5;
   }
   
   this.clearScore = function() {
@@ -66,17 +83,17 @@ function ScoreBoardGameControl() {
 // Instancia objeto
 scoreControl = new ScoreBoardGameControl;
 
-function checkScore() {
+function checkScore(scoreDiv) {
   scoreNow = scoreControl.scoreNow();
   if (scoreNow > 0) {
-    scoreElement.classList.remove('btn-primary', 'btn-danger');
-    scoreElement.classList.add('btn-success');
+    scoreDiv.classList.remove('btn-primary', 'btn-danger');
+    scoreDiv.classList.add('btn-success');
   } else if (scoreNow < 0) {
-    scoreElement.classList.remove('btn-primary', 'btn-success');
-    scoreElement.classList.add('btn-danger');
+    scoreDiv.classList.remove('btn-primary', 'btn-success');
+    scoreDiv.classList.add('btn-danger');
   } else {
-    scoreElement.classList.remove('btn-danger', 'btn-success');
-    scoreElement.classList.add('btn-primary');
+    scoreDiv.classList.remove('btn-danger', 'btn-success');
+    scoreDiv.classList.add('btn-primary');
   }
 }
 
@@ -127,7 +144,7 @@ function disableCards() {
 
   scoreControl.incrementScore();
   scoreControl.updateScore();
-  checkScore();
+  checkScore(scoreElement);
 
   resetBoard();
 }
@@ -139,7 +156,7 @@ function unflipCards() {
 
   scoreControl.decrementScore();
   scoreControl.updateScore();
-  checkScore();
+  checkScore(scoreElement);
 
   setTimeout(() => {
     firstCard.classList.remove('flip');
@@ -165,7 +182,7 @@ function restartGame() {
   cards.forEach(card => card.classList.remove('flip'));
   cards.forEach(card => card.addEventListener('click', flipCard));
   scoreControl.clearScore();
-  checkScore();
+  checkScore(scoreElement);
   resetBoard();
   shuffle();
 }
