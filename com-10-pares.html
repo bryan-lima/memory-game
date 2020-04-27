@@ -270,6 +270,39 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal-end-game" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- Cabeçalho modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Fim de Jogo!</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>x</span>
+                    </button>
+                </div>
+                <!-- Corpo modal -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-dark" id="modal-end-game-txt-score" alt="Placar do jogo" title="Score">Seu Score:</button>
+                                    <button type="button" class="btn btn-primary" id="modal-end-game-score" alt="Placar do jogo" title="Score">0</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rodapé modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning" data-dismiss="modal" onclick="restartGame();" id="modal-btn-restart"><i class="fas fa-sync-alt" id="modal-icon-restart"></i> Restart Game</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script type="text/javascript" src="assets/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
